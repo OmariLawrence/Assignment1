@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/screen1">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="TOY CARS" />
+
+    <TableLayout
+        android:id="@+id/table1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview1"
+        android:stretchColumns="0,1,2,3,4">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:text="Hot Wheels" />
+
+            <TextView
+                android:layout_column="1"
+                android:text="$50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:text="ADD"
+                android:onClick="addclick1"/>
+            <Button
+                android:id="@+id/button2"
+                android:text="REMOVE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:onClick="removeclick1"/>
+            <TextView
+                android:id="@+id/textview6"
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="4"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:text="Trandformers" />
+
+            <TextView
+                android:layout_column="1"
+                android:text="$100" />
+            <Button
+                android:id="@+id/button3"
+                android:text="ADD"
+                android:onClick="addclick2"/>
+            <Button
+                android:id="@+id/button4"
+                android:text="REMOVE"
+                android:onClick="removeclick2"/>/>
+            <TextView
+                android:id="@+id/textview7"
+                android:text="0"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:text="Tonka" />
+            <TextView
+                android:layout_column="1"
+                android:text="$150" />
+            <Button
+                android:id="@+id/button5"
+                android:text="ADD"
+                android:onClick="addclick3"/>
+            <Button
+                android:id="@+id/button6"
+                android:text="REMOVE"
+                android:onClick="removeclick3"/>/>
+            <TextView
+                android:id="@+id/textview8"
+                android:text="0"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textview5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:text="ZipZaps" />
+            <TextView
+                android:layout_column="1"
+                android:text="$200" />
+            <Button
+                android:id="@+id/button7"
+                android:text="ADD"
+                android:onClick="addclick4"/>
+            <Button
+                android:id="@+id/button8"
+                android:text="REMOVE"
+                android:onClick="removeclick4"/>
+            <TextView
+                android:id="@+id/textview9"
+                android:text="0"/>
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:id="@+id/textview10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coupon Code: "
+        android:layout_column="0"
+        android:layout_below="@+id/table1"/>
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Coupon Code"
+        android:layout_toRightOf="@+id/textview10"
+        android:layout_below="@+id/table1"/>
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:text="VAT"
+        android:layout_below="@+id/edittext1"/>
+    <TextView
+        android:id="@+id/textview11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area Code"
+        android:layout_below="@+id/checkbox1"/>
+    <RadioGroup
+        android:id="@+id/radiogroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview11">
+        <RadioButton
+            android:id="@+id/radiobutton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="33100-34000" />
+        <RadioButton
+            android:id="@+id/radiobutton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="34000-35001"/>
+        <RadioButton
+            android:id="@+id/radiobutton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00000"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroup1"
+        android:text="Calculate"
+        android:onClick="calculate"/>
+
+    <TextView
+        android:id="@+id/textview13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$00000"
+        android:layout_below="@+id/radiogroup1"
+        android:layout_toRightOf="@+id/button9"
+        android:layout_marginLeft="20px"
+        android:textSize="25dp"/>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="125dp"
+        android:layout_marginLeft="220dp"
+        app:srcCompat="@drawable/rsz_download" />
+
+    <TextView
+        android:id="@+id/textview12"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Only a max of 5 total cars are allowed"
+        android:layout_below="@id/button9"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>
